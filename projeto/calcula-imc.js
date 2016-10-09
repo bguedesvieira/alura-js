@@ -1,4 +1,8 @@
-function calculaTodosImcs() {
+
+
+var botao = document.getElementById("calcula-imcs");
+//botao.onclick = calculaTodosImcs;
+botao.addEventListener("click", function () {
     var trPacientes = document.getElementsByClassName("paciente"); //Array de trs
 
     percorreArray(trPacientes, function(trPaciente) {
@@ -11,11 +15,7 @@ function calculaTodosImcs() {
 
         console.log(imc);
     });
-}
-
-var botao = document.getElementById("calcula-imcs");
-//botao.onclick = calculaTodosImcs;
-botao.addEventListener("click", calculaTodosImcs);
+});
 botao.addEventListener("click",function(){console.log("calculando imcs...");})
 
 /*
